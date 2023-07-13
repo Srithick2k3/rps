@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="script" href=yt.js>
+    <title>My page</title>
+</head>
+<body>
+    <script>
+        let userdes = confirm("Shall we play rock paper and sis?")
+        {
+            if(userdes)
+            {
+                let userchoice = prompt("Enter your choise, is it rock, paper or sis?");
+                {
+                    if(userchoice)
+                    {
+                        let p1 = userchoice.trim();
+                        if(p1==="rock"||p1==="paper"||p1==="sis")
+                        {
+                            let comp = Math.floor(Math.random()*3+1);
+                            let compchoice=comp===1?"rock":comp===2?"paper":"sis";
+                            
+                            let result = p1===compchoice?"tie"
+                            :p1==="rock"&&compchoice==="paper"?"comp wins"
+                            :p1==="rock"&&compchoice==="sis"?"person wins"
+                            :p1==="paper"&&compchoice==="rock"?"person wins"
+                            :p1==="paper"&&compchoice==="sis"?"comp wins"
+                            :p1==="sis"&&compchoice==="paper"?"person wins"
+                            :"comp wins";
+                            alert(result);
+                            let playagain = confirm("do you want to playagain?");
+                            playagain?location.reload():alert("ok thanks");
+                        }
+                        else
+                        {
+                            alert("You have cancelled");
+                        }
+                        
+                    }
+                    else
+                    {
+                        alert("You have cancelled");
+                    }
+                    
+                }   
+
+            }
+            else
+                {
+                    alert("You have cancelled");
+                }
+        }
+    </script>
+    
+</body>
+</html>
